@@ -4,12 +4,12 @@
 %global project         davecgh
 %global repo            go-spew
 %global import_path     %{provider}.%{provider_tld}/%{project}/%{repo}
-%global commit          83f84dc933714d51504ceed59f43ead21d096fe7
+%global commit          1aaf839fb07e099361e445273993ccd9adc21b07
 %global shortcommit     %(c=%{commit}; echo ${c:0:7})
 
 Name:           golang-%{provider}-%{project}-%{repo}
 Version:        0
-Release:        0.1.git%{shortcommit}%{?dist}
+Release:        0.2.git%{shortcommit}%{?dist}
 Summary:        Implements a deep pretty printer for Go data structures to aid in debugging
 License:        ISC
 URL:            https://%{import_path}
@@ -55,6 +55,10 @@ cp -rpav spew %{buildroot}/%{gopath}/src/%{import_path}/
 %{gopath}/src/%{import_path}
 
 %changelog
+* Fri Feb 06 2015 jchaloup <jchaloup@redhat.com> - 0-0.2.git1aaf839
+- Bump to upstream 1aaf839fb07e099361e445273993ccd9adc21b07
+  related: #1172198
+
 * Tue Dec 09 2014 jchaloup <jchaloup@redhat.com> - 0-0.1.git83f84dc
 - First package for Fedora
   resolves: #1172198
