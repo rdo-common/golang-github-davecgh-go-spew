@@ -9,7 +9,7 @@
 
 Name:           golang-%{provider}-%{project}-%{repo}
 Version:        0
-Release:        0.3.git%{shortcommit}%{?dist}
+Release:        0.4.git%{shortcommit}%{?dist}
 Summary:        Implements a deep pretty printer for Go data structures to aid in debugging
 License:        ISC
 URL:            https://%{import_path}
@@ -55,6 +55,9 @@ cp -rpav spew %{buildroot}/%{gopath}/src/%{import_path}/
 %{gopath}/src/%{import_path}
 
 %changelog
+* Wed Jun 17 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0-0.4.git3e6e67c
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
+
 * Mon Apr 20 2015 jchaloup <jchaloup@redhat.com> - 0-0.3.git3e6e67c
 - Bump to upstream 3e6e67c4dcea3ac2f25fd4731abc0e1deaf36216
   related: #1172198
