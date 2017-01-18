@@ -37,12 +37,12 @@
 # https://github.com/davecgh/go-spew
 %global provider_prefix %{provider}.%{provider_tld}/%{project}/%{repo}
 %global import_path     %{provider_prefix}
-%global commit          3e6e67c4dcea3ac2f25fd4731abc0e1deaf36216
+%global commit          6d212800a42e8ab5c146b8ace3490ee17e5225f9
 %global shortcommit     %(c=%{commit}; echo ${c:0:7})
 
 Name:           golang-%{provider}-%{project}-%{repo}
 Version:        0
-Release:        0.10.git%{shortcommit}%{?dist}
+Release:        0.11.git%{shortcommit}%{?dist}
 Summary:        Deep pretty printer for Go data structures to aid in debug
 License:        ISC
 URL:            https://%{provider_prefix}
@@ -162,6 +162,10 @@ export GOPATH=%{buildroot}/%{gopath}:$(pwd)/Godeps/_workspace:%{gopath}
 %endif
 
 %changelog
+* Wed Jan 18 2017 Jan Chaloupka <jchaloup@redhat.com> - 0-0.11.git6d21280
+- Bump to upstream 6d212800a42e8ab5c146b8ace3490ee17e5225f9
+  related: #1248791
+
 * Fri Jan 13 2017 Jan Chaloupka <jchaloup@redhat.com> - 0-0.10.git3e6e67c
 - Polish the spec file
   related: #1248791
